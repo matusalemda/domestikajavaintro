@@ -16,11 +16,11 @@ function recogeDatos(evento){
   var mensajeEdad;
   
 
-  // Verifica se o nome e a data de nascimento estão vazios
-  if (nombre === "" || fecha === "") {
-    bienvenida.innerHTML = "<p>Por favor, preencha todos os campos.</p>";
-    return; // Sai da função se algum campo estiver vazio
-  }
+    // Verifica se o nome e a data de nascimento estão vazios
+    if (nombre === '' || fecha === '') {
+      bienvenida.innerHTML = "<p>Por favor, preencha todos os campos.</p>";
+      return; // Sai da função se algum campo estiver vazio
+    }
 
 
 
