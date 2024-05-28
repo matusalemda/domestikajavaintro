@@ -1,5 +1,10 @@
 
 
+
+var miForm = document.querySelector("#formulario");
+miForm.addEventListener("submit", recogeDatos)
+
+
 function recogeDatos(evento){
   
  evento.preventDefault();
@@ -11,10 +16,20 @@ function recogeDatos(evento){
   var mensajeEdad;
   
 
+  // Verifica se o nome e a data de nascimento estão vazios
+  if (nombre === "" || fecha === "") {
+    bienvenida.innerHTML = "<p>Por favor, preencha todos os campos.</p>";
+    return; // Sai da função se algum campo estiver vazio
+  }
+
+
+
+
+
   if(edad > 30){
     mensajeEdad = "abuelo!";
   } else if (edad < 30) {
-    mensajeEdad = "jovenzuelo!"
+    mensajeEdad = "jovenzuelo!!!!"
   } else {
     mensajeEdad = "No me lo creo!"
   }
@@ -34,8 +49,11 @@ function recogeDatos(evento){
 
 
 
-var miForm = document.querySelector("#formulario");
 
 
 
-miForm.addEventListener("submit", recogeDatos)
+
+
+
+
+
